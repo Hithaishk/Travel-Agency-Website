@@ -19,4 +19,7 @@ npm i mongoose    -to install the mongoose   assists to connect the database
 
 
 node filename       -to run the express project
+
+
+
 npx nodemon filename  -to run the project with nodemon assist
