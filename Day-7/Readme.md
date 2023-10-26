@@ -11,15 +11,15 @@ http://localhost:5000/test   -type in the browser to hit the page
 postman - Postman is an API(application programming interface) development tool which helps to build, test and modify APIs. Almost any functionality that could be needed by any developer is encapsulated in this tool. It is used by over 5 million developers every month to make their API development easy and simple. It has the ability to make various types of HTTP requests(GET, POST, PUT, PATCH), saving environments for later use, converting the API to code for various languages(like JavaScript, Python).
 
 
-mongoDB  -   https://www.mongodb.com/atlas   -to create a mongoDB account and  download the mongoDB Compass
+mongoDB  -   https://www.mongodb.com/atlas   -to create a mongoDB account and  download the mongoDB Compass  <br>
 
 
-npm i  nodeman    -to  install the nodeman
-npm i mongoose    -to install the mongoose   assists to connect the database
+npm i  nodeman    -to  install the nodeman      <br>
+npm i mongoose    -to install the mongoose   assists to connect the database        <br>
 
 
-node filename       -to run the express project
+node filename       -to run the express project <br>
 
 
 
-npx nodemon filename  -to run the project with nodemon assist
+npx nodemon filename  -to run the project with nodemon assist   <br>
