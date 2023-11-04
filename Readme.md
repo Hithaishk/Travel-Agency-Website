@@ -4,42 +4,42 @@
 <h2>PR0JECT NAME - TRAVEL AGENCY WEBSITE</h2><br/>
 
 <h3>Files:</h3>
-    Frontend : react-project
-        -It uses react 
-        -Bootstrap used for styling and Responsive ness
+    Frontend : react-project<br/>
+        -It uses react <br/>
+        -Bootstrap used for styling and Responsive ness<br/>
 
-    Backend  : Day-7
-        -It uses Node js frameworks like expressjs and mongoose
-        -Also used body-parser and Axios for request and response front end to backend 
+    Backend  : Day-7 <br/>
+        -It uses Node js frameworks like expressjs and mongoose<br/>
+        -Also used body-parser and Axios for request and response front end to backend <br/>
 
         
 
-<h3>Prerequisites</h3>
-    Install Below  noted program files
-        -Nodejs
-        -NPM
-        -MongoDB 
+<h3>Prerequisites</h3><br/>
+    Install Below  noted program files<br/>
+        -Nodejs<br/>
+        -NPM<br/>
+        -MongoDB <br/>
 
 
-<h3>To setup:</h3>
-    -clone or dowload this Repo
-        1. -cd TRAVEL-AGENCY-WEBSITE/DAY-7
-           -npm install
-           -replace your mongo_db url in the server and Server1 file
+<h3>To setup:</h3><br/>
+    -clone or dowload this Repo<br/>
+        1. -cd TRAVEL-AGENCY-WEBSITE/DAY-7<br/>
+           -npm install<br/>
+           -replace your mongo_db url in the server and Server1 file<br/>
 
-        2. -cd TRAVEL_AGENCY-WEBSITE/react-project
-           -npm install
+        2. -cd TRAVEL_AGENCY-WEBSITE/react-project<br/>
+           -npm install<br/>
 
 
-<h3>To Run:</h3>
-    Frontend:
-        1. -cd TRAVEL_AGENCY-WEBSITE/react-project
-        2. -npm start
+<h3>To Run:</h3><br/>
+    Frontend:<br/>
+        1. -cd TRAVEL_AGENCY-WEBSITE/react-project<br/>
+        2. -npm start<br/>
 
-    Backend:
-        1. -cd TRAVEL-AGENCY-WEBSITE/DAY-7
-        2. -npx nodemon server     //backend used to signup/login/TripRegistration/ port localhost/3000
-        3. -npx nodemon Server1    //backend used for the rent bikes/  port localhost/5000
+    Backend:<br/>
+        1. -cd TRAVEL-AGENCY-WEBSITE/DAY-7<br/>
+        2. -npx nodemon server     //backend used to signup/login/TripRegistration/ port localhost/3000<br/>
+        3. -npx nodemon Server1    //backend used for the rent bikes/  port localhost/5000<br/>
 
 
     
