@@ -13,7 +13,7 @@
 // // Connect to MongoDB
 // mongoose
 //   .connect(
-//     "mongodb+srv://hithaish:Hithaish%40123@cluster0.larynjs.mongodb.net/",
+//     "mongodb+srv://hithaish:@cluster0.larynjs.mongodb.net/",
 //     {
 //       useNewUrlParser: true,
 //       useUnifiedTopology: true,
