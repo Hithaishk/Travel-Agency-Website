@@ -32,6 +32,7 @@
 
 
 <h3>To Run:</h3>
+
     Frontend:
         1. -cd TRAVEL_AGENCY-WEBSITE/react-project
         2. -npm start
