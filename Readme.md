@@ -1,6 +1,5 @@
 <h1>MERN STACK PROJECT - REACT,EXPRESS,NODE-JS,MONGO-DB</h1><br/>
 
-
 <h2>PR0JECT NAME - TRAVEL AGENCY WEBSITE</h2><br/>
 
 <h3>Files:</h3>
@@ -12,14 +11,13 @@
         -It uses Node js frameworks like expressjs and mongoose<br/>
         -Also used body-parser and Axios for request and response front end to backend <br/>
 
-        
+
 
 <h3>Prerequisites</h3><br/>
     Install Below  noted program files <br/>
         -Nodejs <br/>
         -NPM <br/>
         -MongoDB <br/>
-
 
 <h3>To setup:</h3><br/>
     -clone or dowload this Repo <br/>
@@ -30,16 +28,11 @@
         2. -cd TRAVEL_AGENCY-WEBSITE/react-project <br/>
            -npm install <br/>
 
-
 <h3>To Run:</h3> <br/>
     Frontend: <br/>
         1. -cd TRAVEL_AGENCY-WEBSITE/react-project <br/>
         2. -npm start <br/>
 
-    Backend: <br/>
-        1. -cd TRAVEL-AGENCY-WEBSITE/DAY-7 <br/>
-        2. -npx nodemon server     //backend used to signup/login/TripRegistration/ port localhost/3000 <br/>
-        3. -npx nodemon Server1    //backend used for the rent bikes/  port localhost/5000 <br/>
-
-
-    
+    Backend:
+        1. -cd TRAVEL-AGENCY-WEBSITE/DAY-7
+        2. -npx nodemon server     //backend port localhost/5000/api
