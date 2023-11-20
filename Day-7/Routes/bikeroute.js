@@ -1,11 +1,13 @@
+// routes/bikeRoutes.js
+
 const express = require("express");
-const router1 = express.Router();
+const router = express.Router();
 const bikeController = require("../Controllers/bikeController");
 
-router1.get("/", bikeController.getAllBikes);
-router1.post("/", bikeController.addBikes);
-router1.get("/:id", bikeController.getById);
-router1.put("/:id", bikeController.updateBike);
-router1.delete("/:id", bikeController.deleteBike);
+router.post("/", bikeController.addBike);
+router.get("/", bikeController.getAllBikes);
+router.get("/:id", bikeController.getBikeById);
+router.put("/:id", bikeController.updateBike);
+router.delete("/:id", bikeController.deleteBike);
 
-module.exports = router1;
+module.exports = router;

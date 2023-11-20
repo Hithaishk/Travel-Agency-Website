@@ -1,21 +1,21 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import 'bootstrap/dist/js/bootstrap.bundle.min';
+import "bootstrap/dist/js/bootstrap.bundle.min";
 import { Link } from "react-router-dom";
 import Bike from "./bike";
-import axios from 'axios';
+import axios from "axios";
 
-const URL = "http://localhost:5000/bikes";
+const URL = "http://localhost:5000/api/bikes";
 
 const fetchHandler = async () => {
   return await axios.get(URL).then((res) => res.data);
-}
+};
 
 function Bikes() {
   const [bikes, setBikes] = useState();
 
   useEffect(() => {
-    fetchHandler().then(data => setBikes(data.bikes));
+    fetchHandler().then((data) => setBikes(data.bikes));
   }, []);
 
   console.log(bikes);
@@ -57,15 +57,15 @@ function Bikes() {
             </div>
           </nav>
           <div className="row">
-            {bikes && bikes.map((bike, i) => (
-              <div key={i} className="col-md-4 mb-3">
-                <Bike bike={bike} />
-              </div>
-            ))}
+            {bikes &&
+              bikes.map((bike, i) => (
+                <div key={i} className="col-md-4 mb-3">
+                  <Bike bike={bike} />
+                </div>
+              ))}
           </div>
         </div>
       </div>
-      
     </>
   );
 }

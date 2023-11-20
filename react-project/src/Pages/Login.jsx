@@ -52,7 +52,7 @@ function Login() {
     try {
       // Your fetch and API call code remains the same
       // ...
-      const response = await fetch("/api/login", {
+      const response = await fetch("http://localhost:5000/api/user/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -67,7 +67,8 @@ function Login() {
         setErrors({});
 
         sessionStorage.setItem("isLoggedIn", "true"); // Set user as logged in
-      
+        document.cookie = `user=${formData.email}; path=/`;
+
         navigate("/");
       } else if (response.status === 401) {
         setErrors({ email: "Invalid email or password" });
@@ -128,7 +129,6 @@ function Login() {
                 <button className="btn btn-primary">Sign in</button>
               </div>
               <p className="text-center mt-1">
-                
                 <Link to="/signup" className="ms-2">
                   Sign up
                 </Link>

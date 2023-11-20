@@ -1,9 +1,10 @@
-//TripRegRoute.js
-const express = require("express");
-const TripRegistration = require("../model/TripReg");
-const router = express.Router();
-// Create a new registration
-router.post("/register", async (req, res) => {
+// controllers/tripRegistrationController.js
+
+const TripRegistration = require("../Model/tripModel");
+// const User = require("../Model/userModel");
+
+// Register a new trip
+exports.register = async (req, res) => {
   try {
     const { selectedDate, name, age, gender, selectedPackage, user } = req.body; // Include the "user" field
 
@@ -26,11 +27,10 @@ router.post("/register", async (req, res) => {
   } catch (err) {
     res.status(500).send("Error registering the trip.");
   }
-});
+};
 
-// Retrieve a single registration by ID
-// Retrieve all registrations
-router.get("/registrations", async (req, res) => {
+// Retrieve all trip registrations
+exports.getAllRegistrations = async (req, res) => {
   const user = req.headers["user-email"]; // Get user email from headers
 
   try {
@@ -44,10 +44,28 @@ router.get("/registrations", async (req, res) => {
   } catch (err) {
     res.status(500).send("Error retrieving registrations.");
   }
-});
+};
 
-// Update a registration by ID
-router.put("/registrations/:id", async (req, res) => {
+// Retrieve a trip registration by ID
+exports.getRegistrationById = async (req, res) => {
+  const registrationId = req.params.id;
+
+  try {
+    const tripRegistration = await TripRegistration.findById(registrationId);
+
+    if (!tripRegistration) {
+      return res.status(404).json({ message: "Trip registration not found" });
+    }
+
+    return res.status(200).json(tripRegistration);
+  } catch (err) {
+    console.log(err);
+    return res.status(500).json({ message: "Internal Server Error" });
+  }
+};
+
+// Update a trip registration by ID
+exports.updateRegistration = async (req, res) => {
   const registrationId = req.params.id;
   const { selectedDate, name, age, gender, selectedPackage } = req.body;
 
@@ -72,10 +90,10 @@ router.put("/registrations/:id", async (req, res) => {
   } catch (err) {
     res.status(500).send("Error updating the registration.");
   }
-});
+};
 
-// Delete a registration by ID
-router.delete("/registrations/:id", async (req, res) => {
+// Delete a trip registration by ID
+exports.deleteRegistration = async (req, res) => {
   const registrationId = req.params.id;
 
   try {
@@ -90,6 +108,4 @@ router.delete("/registrations/:id", async (req, res) => {
   } catch (err) {
     res.status(500).send("Error deleting the registration.");
   }
-});
-
-module.exports = router;
+};

@@ -1,29 +1,14 @@
-const mongoose =require('mongoose')
+// models/bikeModel.js
 
-const Schema =mongoose.Schema;
+const mongoose = require("mongoose");
 
-const rentSchema = new Schema({
-    name:{
-        type:String,
-        required:true
-    },
-    
-    description:{
-        type:String,
-        required:true
-    },
-    rent:{
-        type:Number,
-        required:true
-    },
-    contact:{
-        type:String,
-        required:true
-    },
-    image:{
-         type:String,
-         required:true
-    }
+const bikeSchema = new mongoose.Schema({
+  owner: { type: mongoose.Schema.Types.ObjectId, ref: "User" }, // Reference to the User model
+  name: String,
+  description: String,
+  rent: Number,
+  contact: String,
+  image: String,
 });
 
-module.exports =mongoose.model("rent",rentSchema)
+module.exports = mongoose.model("Bike", bikeSchema);

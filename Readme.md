@@ -15,31 +15,31 @@
         
 
 <h3>Prerequisites</h3><br/>
-    Install Below  noted program files<br/>
-        -Nodejs<br/>
-        -NPM<br/>
+    Install Below  noted program files <br/>
+        -Nodejs <br/>
+        -NPM <br/>
         -MongoDB <br/>
 
 
 <h3>To setup:</h3><br/>
-    -clone or dowload this Repo<br/>
-        1. -cd TRAVEL-AGENCY-WEBSITE/DAY-7<br/>
-           -npm install<br/>
+    -clone or dowload this Repo <br/>
+        1. -cd TRAVEL-AGENCY-WEBSITE/DAY-7 <br/>
+           -npm install <br/>
            -replace your mongo_db url in the server and Server1 file<br/>
 
-        2. -cd TRAVEL_AGENCY-WEBSITE/react-project<br/>
-           -npm install<br/>
+        2. -cd TRAVEL_AGENCY-WEBSITE/react-project <br/>
+           -npm install <br/>
 
 
-<h3>To Run:</h3><br/>
-    Frontend:<br/>
-        1. -cd TRAVEL_AGENCY-WEBSITE/react-project<br/>
-        2. -npm start<br/>
+<h3>To Run:</h3> <br/>
+    Frontend: <br/>
+        1. -cd TRAVEL_AGENCY-WEBSITE/react-project <br/>
+        2. -npm start <br/>
 
-    Backend:<br/>
-        1. -cd TRAVEL-AGENCY-WEBSITE/DAY-7<br/>
-        2. -npx nodemon server     //backend used to signup/login/TripRegistration/ port localhost/3000<br/>
-        3. -npx nodemon Server1    //backend used for the rent bikes/  port localhost/5000<br/>
+    Backend: <br/>
+        1. -cd TRAVEL-AGENCY-WEBSITE/DAY-7 <br/>
+        2. -npx nodemon server     //backend used to signup/login/TripRegistration/ port localhost/3000 <br/>
+        3. -npx nodemon Server1    //backend used for the rent bikes/  port localhost/5000 <br/>
 
 
     

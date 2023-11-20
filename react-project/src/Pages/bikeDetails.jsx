@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import 'bootstrap/dist/js/bootstrap.bundle.min';
-import { Link, useNavigate } from 'react-router-dom';
-import axios from 'axios';
-import { useParams } from 'react-router-dom';
+import "bootstrap/dist/js/bootstrap.bundle.min";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
+import { useParams } from "react-router-dom";
 
 const BikeDetails = () => {
   const [inputs, setInputs] = useState({});
-  const history =useNavigate();
+  const history = useNavigate();
   const [error, setError] = useState(null); // Define the error state
   const id = useParams().id;
   console.log(id);
@@ -16,10 +16,12 @@ const BikeDetails = () => {
     const fetchHandler = async () => {
       // await axios.get('http://localhost:5000/bikes/${id}').then((res)=>res.data).then(data)
       try {
-        const response = await axios.get(`http://localhost:5000/bikes/${id}`);
+        const response = await axios.get(
+          `http://localhost:5000/api/bikes/${id}`
+        );
         setInputs(response.data.bike);
       } catch (error) {
-        setError('Failed to fetch bike details'); // Set error message on fetch failure
+        setError("Failed to fetch bike details"); // Set error message on fetch failure
       }
     };
 
@@ -27,7 +29,7 @@ const BikeDetails = () => {
   }, [id]);
   const sendRequest = async () => {
     try {
-      await axios.put(`http://localhost:5000/bikes/${id}`, {
+      await axios.put(`http://localhost:5000/api/bikes/${id}`, {
         name: String(inputs.name),
         description: String(inputs.description),
         rent: Number(inputs.rent),
@@ -39,17 +41,17 @@ const BikeDetails = () => {
       console.error(error);
     }
   };
-  
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    sendRequest().then(()=>history("/bikes"))
+    sendRequest().then(() => history("/bikes"));
   };
 
   const handleChange = (e) => {
     console.log(e);
     setInputs((prevState) => ({
       ...prevState,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     }));
   };
 
@@ -152,9 +154,8 @@ const BikeDetails = () => {
           Back to Bike Details
         </Link>
       </div>
-      
     </>
   );
-}
+};
 
 export default BikeDetails;

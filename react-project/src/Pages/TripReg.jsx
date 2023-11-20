@@ -21,7 +21,7 @@ function TripReg() {
     premium: 2999,
   };
 
-  const API_URL = "http://localhost:3000/api";
+  const API_URL = "http://localhost:5000/api/trip-registrations";
 
   useEffect(() => {
     fetchRegistrations();
@@ -32,6 +32,7 @@ function TripReg() {
       .split("; ")
       .find((row) => row.startsWith("user="))
       ?.split("=")[1];
+    console.log(userEmail);
 
     if (userEmail) {
       try {

@@ -1,55 +1,57 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import 'bootstrap/dist/js/bootstrap.bundle.min';
-import { Link } from 'react-router-dom';
-import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import "bootstrap/dist/js/bootstrap.bundle.min";
+import { Link } from "react-router-dom";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function Addbike() {
   const history = useNavigate();
   const [inputs, setInputs] = useState({
-    name: '',
-    description: '',
-    rent: '',
-    contact: '',
-    image: ''
+    name: "",
+    description: "",
+    rent: "",
+    contact: "",
+    image: "",
   });
 
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
   const handleChange = (e) => {
     setInputs((prevState) => ({
       ...prevState,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     }));
-  }
+  };
 
   const isURLValid = (url) => {
     // Simple URL validation using a regular expression
     const urlPattern = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/i;
     return urlPattern.test(url);
-  }
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     if (!isURLValid(inputs.image)) {
-      setError('Invalid Image URL. Please enter a valid URL.');
+      setError("Invalid Image URL. Please enter a valid URL.");
       return;
     }
 
-    sendRequest().then(() => history('/Bikes'));
-  }
+    sendRequest().then(() => history("/Bikes"));
+  };
 
   const sendRequest = async () => {
-    axios.post("http://localhost:5000/bikes", {
-      name: String(inputs.name),
-      description: String(inputs.description),
-      rent: Number(inputs.rent),
-      contact: String(inputs.contact),
-      image: String(inputs.image)
-    }).then(res => res.data);
-  }
+    axios
+      .post("http://localhost:5000/api/bikes", {
+        name: String(inputs.name),
+        description: String(inputs.description),
+        rent: Number(inputs.rent),
+        contact: String(inputs.contact),
+        image: String(inputs.image),
+      })
+      .then((res) => res.data);
+  };
 
   return (
     <>
@@ -150,7 +152,6 @@ function Addbike() {
           All Bikes
         </Link>
       </div>
-      
     </>
   );
 }
