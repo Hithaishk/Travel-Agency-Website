@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 
 // Connect to MongoDB
 mongoose
-  .connect("mongodb+srv:", {
+  .connect("mongooose URL", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })

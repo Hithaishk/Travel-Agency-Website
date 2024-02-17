@@ -11,8 +11,6 @@
         -It uses Node js frameworks like expressjs and mongoose<br/>
         -Also used body-parser and Axios for request and response front end to backend <br/>
 
-
-
 <h3>Prerequisites</h3><br/>
     Install Below  noted program files <br/>
         -Nodejs <br/>
@@ -23,7 +21,7 @@
     -clone or dowload this Repo <br/>
         1. -cd TRAVEL-AGENCY-WEBSITE/DAY-7 <br/>
            -npm install <br/>
-           -replace your mongo_db url in the server and Server1 file<br/>
+           -replace your mongo_db url in the server.js<br/>
 
         2. -cd TRAVEL_AGENCY-WEBSITE/react-project <br/>
            -npm install <br/>
